@@ -1,40 +1,53 @@
 name: athletes_mindful_companion
-description: A mental companion app for individual athletes (golf, tennis, etc.)
-publish_to: 'none'
-version: 1.0.0+1
+description: Athlete's Mindful Companion – ein interaktiver mentaler Begleiter für Einzelsportler.
+publish_to: "none"
+version: 0.1.0+1
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
+  sdk: ">=3.4.0 <4.0.0"
+  flutter: ">=3.22.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  flutter_riverpod: ^2.4.9
-  riverpod_annotation: ^2.3.3
-  isar: ^3.1.0+1
-  isar_flutter_libs: ^3.1.0+1
-  path_provider: ^2.1.1
-  cupertino_icons: ^1.0.2
-  flutter_svg: ^2.0.7
-  speech_to_text: ^6.1.0
-  flutter_local_notifications: ^15.1.1
-  timezone: ^0.9.2
-  http: ^1.1.0
-  uuid: ^3.0.7
-  intl: ^0.18.1
-  shared_preferences: ^2.2.2
+  cupertino_icons: ^1.0.8
+
+  # State Management
+  flutter_riverpod: ^2.5.1
+
+  # Local Storage (Offline-First, JSON file store)
+  path_provider: ^2.1.4
+  path: ^1.9.0
+  sqflite: ^2.3.3+1
+
+  # Secure Storage (API Keys / Token)
+  flutter_secure_storage: ^9.2.2
+
+  # LLM Integration
+  http: ^1.2.2
+
+  # Speech-to-Text (Low-Friction UI)
+  record: ^5.1.0
+
+  # Local Notifications (Brücken-Strategie)
+  flutter_local_notifications: ^17.2.2
+  timezone: ^0.9.4
+
+  # Utilities
+  uuid: ^4.4.2
+  intl: ^0.19.0
+  collection: ^1.18.0
+  equatable: ^2.0.5
+
+  # Export (JSON / CSV Backup)
+  share_plus: ^9.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.1
-  riverpod_generator: ^2.3.9
-  build_runner: ^2.4.8
-  isar_generator: ^3.1.0+1
-  mockito: ^5.4.4
+  flutter_lints: ^4.0.0
 
 flutter:
   uses-material-design: true
   assets:
-    - assets/images/
-    - assets/icons/
+    - assets/prompts/
